@@ -11,31 +11,23 @@ Randomly gerneraes a password that meets the  criteria below.
 ## Criteria
 
 ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
+Generate button initiates a series for prompts, asking the user to select:
+Password length between 8 & 128 characters.
+Which Character types they would like to include (lowercase, uppercase, numeric, and/or special characters). - At least one is required. 
 WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+Inputs are validated and alert are generated to notify the user if invalid criteria are entered. 
+When all prompts are answered and valid, a password is randonly generated that matches the selected criteria and is dispalyed on the page. 
+
 ```
 
 
 The following image demonstrates the application functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+![password generator demo](./03-javascript-homework-demo.png)
 
 
 
-* The URL of the deployed application:  
+* The URL of the deployed application:  https://annmarkham.github.io/generate-password/
 
 *
 
