@@ -49,34 +49,50 @@ function generatePassword() {
 
 
   //while loop choose randomly from the set of valid characters (if the character type was selected) and repeats until required length is reached. 
+  debugger;
 
   var generated = ""
 
-  while (generated.length <= size - 1) {
+
+  while (generated.length < size) {
+
+
 
     //if lower choose randomly from allLower
     if (lower) {
       var lowerIndex = Math.floor(Math.random() * allLower.length);
-      var generated = generated + allLower[lowerIndex];
+      generated = generated + allLower[lowerIndex];
+      if (generated.length === size) {
+        continue;
+      }
     }
 
     //if upper choose randomly from allUpper
     if (upper) {
       var upperIndex = Math.floor(Math.random() * allUpper.length);
-      var generated = generated + allUpper[upperIndex];
+      generated = generated + allUpper[upperIndex];
+      if (generated.length === size) {
+        continue;
+      }
     }
 
     //if symbol choose randomly from allsymbol
     if (symbol) {
       var symbolIndex = Math.floor(Math.random() * allSymbols.length);
-      var generated = generated + allSymbols[symbolIndex];
+      generated = generated + allSymbols[symbolIndex];
+      if (generated.length === size) {
+        continue;
+      }
     }
 
     //if number choose randomly from allNumbers --  
     if (number) {
       var numberIndex = Math.floor(Math.random() * allNumbers.length);
-      var generated = generated + allNumbers[numberIndex];
-      console.log(generated, typeof generated, "generated");
+      generated = generated + allNumbers[numberIndex];
+      if (generated.length === size) {
+        continue;
+      }
+
     }
   }
 
